@@ -7,6 +7,8 @@ import {HeaderModule} from "./header/header.module";
 import {BodyModule} from "./body/body.module";
 import {FooterModule} from "./footer/footer.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NgxsModule} from "@ngxs/store";
+import {RootState} from "@state/root.state";
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BodyModule,
     FooterModule,
     AppRoutingModule,
+    NgxsModule.forRoot([RootState]),
     BrowserAnimationsModule
   ],
   providers: [],
